@@ -3,6 +3,7 @@
 <head>
   <title>하이블어학원</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
   <style>
     html, body{
@@ -44,17 +45,28 @@
       width: 85%;
       padding: 30px;
     }
-    #topmenu{
-      float: right;
+    @media screen and (max-width:1000px){
+      #topmenu{display:none;}
+      #topmenumobile{
+
+      }
     }
-    #topmenu li{
-      font-size: 20px;
-      margin-right: 30px;
+
+    @media screen and (min-width:1000px){
+      #topmenumobile{display:none;}
+      #topmenu{
+        float: right;
+      }
+      #topmenu li{
+        font-size: 20px;
+        margin-right: 30px;
+      }
+      #topmenu li :hover{
+        color:#e12d7a;
+        transition: 0.3s;
+      }
     }
-    #topmenu li :hover{
-      color:#e12d7a;
-      transition: 0.3s;
-    }
+
     #mainVisual{
       width: 100%;
       padding: 40px 0px;
@@ -93,6 +105,7 @@
 
     #foot{
       position: absolute;
+      left: 0;
       bottom: 0;
       width: 100%;
       padding: 30px;

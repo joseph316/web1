@@ -129,8 +129,8 @@
     .mobile-menu {
       display: block;
       position: fixed;
-      top: 20px;
-      right: 20px;
+      top: 25px;
+      right: 25px;
       z-index: 500;
       width: 45px;
       height: 45px;
@@ -144,22 +144,28 @@
     .menuwrap {
         position: fixed;
         top: 0;
-        left: -300px; /* 너비 300px 인 사이드바를 왼쪽으로 300px 이동시켜 화면에 보이지 않게 함 */
+        width: 60%; /* 너비 */
+        right: -60%; /* 너비 300px 인 사이드바를 왼쪽으로 300px 이동시켜 화면에 보이지 않게 함 */
+        max-width: 400px;
         z-index: 400;
         overflow: auto;
-        width: 300px; /* 너비 */
         height: 100%;
         padding: 50px 20px;
         box-sizing: border-box;
-        transition: left .3s ease-in-out; /* 0.3초 동안 이동 애니메이션 */
+        transition: right .3s ease-in-out; /* 0.3초 동안 이동 애니메이션 */
         background-color: #f0f0f0;
     }
-
-
-    .menuwrap.on {
-        left: 0;
+    .menuwrap li{
+      display: block;
+      font-size: 1.7em;
+      font-weight: bold;
+      padding-top: 1em;
+      padding-left: 10%;
     }
 
+    .menuwrap.on {
+        right: 0;
+    }
 
     #dimmed {
       position: fixed;
@@ -193,11 +199,11 @@
             <nav id="menu">
                 <!-- "메뉴목록 표시" -->
                 <ul class="category_list">
-                    <li class=""><a class="link_sub_item" href="/category/1">이게</a></li>
-                    <li class=""><a class="link_sub_item" href="/category/2">되네</a></li>
-                    <li class=""><a class="link_sub_item" href="/category/3">메뉴</a></li>
-                    <li class=""><a class="link_sub_item" href="/category/4">만들기</a></li>
-                    <li class=""><a class="link_sub_item" href="/category/5">대박</a></li>
+                  <br>
+                  <li><a href="m1.html">하이블 소개</a></li>
+                  <li><a href="m2.html">교육과정</a></li>
+                  <li><a href="m3.html">하이블 소식</a></li>
+                  <li><a href="m4.html">오시는 길</a></li>
                 </ul>
             </nav>
         </div>

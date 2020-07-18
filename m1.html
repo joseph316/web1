@@ -20,7 +20,7 @@
 
     #wrapper {
       position:relative;
-      min-height:100%;
+      min-height: 100%;
     }
 
     a{
@@ -68,6 +68,7 @@
     }
 
     @media screen and (min-width:900px){
+      #topmenumobile{display:none;}
       #contents{
         width: 80%;
         margin: auto;
@@ -96,18 +97,19 @@
 
     #subVisual{
       width: 100%;
-      height: 7em;
+      height: 12em;
+      line-height: 12em;
       text-align: center;
       background-color: #66a3ff;
-      padding: 50px 0px;
-      margin-bottom: 30px;
+      margin-top: -3em;
+      margin-bottom: 3em;
+
     }
     @keyframes subVisual{
       from {
-        transform: translate(0, 20px);
+        transform: translate(0, 2em);
         opacity: 0;
       }
-
       to {
         opacity: 1;
       }
@@ -149,56 +151,163 @@
     img{
       vertical-align: middle;
       margin: 5px;
+      max-width: 100%;
+    }
+    #mainVisual img{
+      max-width: 60%;
+      height: auto;
+    }
+
+    .mobile-menu {
+      display: block;
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      z-index: 500;
+      width: 45px;
+      height: 45px;
+      padding: 5px;
+      background-color: #f0f0f0;
+      border: 0;
+    }
+    .mobile-menu i {
+        font-size: 2em;
+    }
+    .menuwrap {
+        position: fixed;
+        top: 0;
+        width: 60%;
+        right: -60%;
+        max-width: 400px;
+        z-index: 400;
+        overflow: auto;
+        height: 100%;
+        padding: 50px 20px;
+        box-sizing: border-box;
+        transition: right .3s ease-in-out;
+        background-color: #f0f0f0;
+    }
+    .menuwrap li{
+      display: block;
+      font-size: 1.7em;
+      font-weight: bold;
+      padding-top: 1em;
+      padding-left: 10%;
+    }
+    .menuwrap li :hover{
+      color:#e12d7a;
+      transition: 0.3s;
+    }
+
+    .menuwrap.on {
+        right: 0;
+    }
+
+    #dimmed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 300;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
     }
   </style>
 </head>
-
 <body>
-<div id="wrapper">
-  <div id="header">
-    <h1><a href="index.html">하이블어학원</a></h1>
-    <div id="topmenu">
-      <ul><b>
-        <li style="color:#e12d7a;"><a href="m1.html">하이블 소개</a></li>
-        <li><a href="m2.html">교육과정</a></li>
-        <li><a href="m3.html">하이블 소식</a></li>
-        <li><a href="m4.html">오시는 길</a></li>
-      </b></ul>
-      <a href="https://blog.naver.com/qorudgur" target="_blank"><img src="blog.png" height=25px></a>
-      <a href="https://www.youtube.com/channel/UCjfykZ7EtQAXd3v3EFokgrQ" target="_blank"><img src="youtube.png" height=35px></a>
+  <div id="wrapper">
+    <div id="header">
+      <h1><a href="index.html">하이블어학원</a></h1>
+      <div id="topmenu">
+        <ul><b>
+          <li><a href="m1.html" style="color:#e12d7a;">하이블 소개</a></li>
+          <li><a href="m2.html">교육과정</a></li>
+          <li><a href="m3.html">하이블 소식</a></li>
+          <li><a href="m4.html">오시는 길</a></li>
+        </b></ul>
+        <a href="https://blog.naver.com/qorudgur" target="_blank"><img src="blog.png" height=25px></a>
+        <a href="https://www.youtube.com/channel/UCjfykZ7EtQAXd3v3EFokgrQ" target="_blank"><img src="youtube.png" height=35px></a>
+      </div>
+      <div id="topmenumobile">
+        <button type="button" class="mobile-menu"><i class="fas fa-bars"></i></button>
+
+        <div class="menuwrap">
+            <nav id="menu">
+                <ul class="category_list">
+                  <br>
+                  <li><a href="m1.html" style="color:#e12d7a;">하이블 소개</a></li>
+                  <li><a href="m2.html">교육과정</a></li>
+                  <li><a href="m3.html">하이블 소식</a></li>
+                  <li><a href="m4.html">오시는 길</a></li>
+                </ul>
+            </nav>
+        </div>
+      </div>
+    </div>
+
+    <div id=subVisual>
+      <h2 style="color: white">About Us</h2>
+    </div>
+
+    <div id="contents">
+      <h3>하이블어학원의 영어기능(듣기, 말하기, 읽기, 쓰기)의 통합교육이란?</h3>
+      <p>영어의 4기능에는 듣기, 말하기, 읽기, 쓰기가 있습니다. 듣기와 읽기는 이해기능, 말하기와 쓰기는 표현기능을 담당하고 있지요. 하이블어학원에서는 영어기능에서 한 가지 기능만을 분리하여 따로 따로 지도하는 것보다 통합적으로 지도하는 것이 전체적인 영어 능력을 길러주는데 효과적이기 때문에 4가지 기능들을 통합해서 교육하고 있습니다.</p>
+      <br><br>
+      <h3>영어의 4기능을 통합하여 학습해야 하는 이유</h3>
+      <p>첫째, 언어의 발화와 이해는 동전의 양면과 같아서 서로 분리하기 어렵습니다.</p>
+      <p>둘째, 말과 글은 상호의존적, 상호보완적이기 때문에 이들 간의 관계를 무시한다면 언어의 풍부함을 잃게 됩니다.</p>
+      <p>셋째, 글을 아는 사람에게 있어서 말과 글의 상호관계는 매우 재미있는 언어, 문화와 사회의 반영이기 때문에 언어의 4기능 모두를 사용할 수 있어야 합니다.</p>
+      <p>넷째, 한 가지 언어기능은 다른 언어기능을 강화시키는 기능을 합니다.</p>
+      <p>하이블어학원의 통합영어교육프로그램은 어린 학생들의 관심과 흥미를 끌어낼 수 있도록 듣기, 말하기, 읽기, 쓰기가 모두 골고루 통합되는 교육과정이 도출되어 포괄적인 영어실력향상을 가져옵니다. 영어, 어렵지 않습니다. 누구나 즐겁게 영어를 잘 할 수 있습니다.</p>
+      <br><br>
+    </div>
+
+    <div id="foot">
+      <address>
+        <div>
+          <li><a href="https://blog.naver.com/qorudgur" target="_blank">하이블 블로그</a></li>
+          <li><a href="https://www.youtube.com/channel/UCjfykZ7EtQAXd3v3EFokgrQ"target="_blank">하이블 유튜브</a></li>
+          <br><br>
+        </div>
+        <div>
+          <li>울산광역시 남구 삼산동 1540-12</li>
+          <li>TEL 052-272-3475</li>
+        </div>
+      </address>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+    document.querySelector(".mobile-menu").addEventListener("click", function(e){
+        if ( document.querySelector('.menuwrap').classList.contains('on') ){
+            //메뉴닫힘
+            document.querySelector('.menuwrap').classList.remove('on');
+            document.querySelector('.mobile-menu i').classList.remove('fa-times')
+            document.querySelector('.mobile-menu i').classList.add('fa-bars');
 
-  <div id=subVisual>
-    <h2 style="color: white">About Us</h2>
-  </div>
+            //페이지 스크롤 락 해제
+            document.querySelector('#dimmed').remove();
+        } else {
+            //메뉴펼침
+            document.querySelector('.menuwrap').classList.add('on');
+            document.querySelector('.mobile-menu i').classList.remove('fa-bars');
+            document.querySelector('.mobile-menu i').classList.add('fa-times');
 
-  <div id="contents">
-    <h3>하이블어학원의 영어기능(듣기, 말하기, 읽기, 쓰기)의 통합교육이란?</h3>
-    <p>영어의 4기능에는 듣기, 말하기, 읽기, 쓰기가 있습니다. 듣기와 읽기는 이해기능, 말하기와 쓰기는 표현기능을 담당하고 있지요. 하이블어학원에서는 영어기능에서 한 가지 기능만을 분리하여 따로 따로 지도하는 것보다 통합적으로 지도하는 것이 전체적인 영어 능력을 길러주는데 효과적이기 때문에 4가지 기능들을 통합해서 교육하고 있습니다.</p>
-    <br><br>
-    <h3>영어의 4기능을 통합하여 학습해야 하는 이유</h3>
-    <p>첫째, 언어의 발화와 이해는 동전의 양면과 같아서 서로 분리하기 어렵습니다.</p>
-    <p>둘째, 말과 글은 상호의존적, 상호보완적이기 때문에 이들 간의 관계를 무시한다면 언어의 풍부함을 잃게 됩니다.</p>
-    <p>셋째, 글을 아는 사람에게 있어서 말과 글의 상호관계는 매우 재미있는 언어, 문화와 사회의 반영이기 때문에 언어의 4기능 모두를 사용할 수 있어야 합니다.</p>
-    <p>넷째, 한 가지 언어기능은 다른 언어기능을 강화시키는 기능을 합니다.</p>
-    <p>하이블어학원의 통합영어교육프로그램은 어린 학생들의 관심과 흥미를 끌어낼 수 있도록 듣기, 말하기, 읽기, 쓰기가 모두 골고루 통합되는 교육과정이 도출되어 포괄적인 영어실력향상을 가져옵니다. 영어, 어렵지 않습니다. 누구나 즐겁게 영어를 잘 할 수 있습니다.</p>
-    <br><br>
-  </div>
+            //페이지 스크롤 락 레이어 추가
+            let div = document.createElement('div');
+            div.id = 'dimmed';
+            document.body.append(div);
 
-  <div id="foot">
-    <address>
-      <div>
-        <li><a href="https://blog.naver.com/qorudgur" target="_blank">하이블 블로그</a></li>
-        <li><a href="https://www.youtube.com/channel/UCjfykZ7EtQAXd3v3EFokgrQ"target="_blank">하이블 유튜브</a></li>
-        <br><br>
-      </div>
-      <div>
-        <li>울산광역시 남구 삼산동 1540-12</li>
-        <li>TEL 052-272-3475</li>
-      </div>
-    </address>
-  </div>
-</div>
+            //페이지 스크롤 락  모바일 이벤트 차단
+            document.querySelector('#dimmed').addEventListener('scroll touchmove touchend mousewheel', function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+          }
+      });
+    });
+
+  </script>
 </body>
 </html>

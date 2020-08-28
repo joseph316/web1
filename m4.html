@@ -6,213 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
-  <style>
-    html, body{
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    body {
-      font-family: "Nanum Gothic", serif;
-      overflow-x: hidden;
-      word-break: keep-all
-    }
-
-    #wrapper {
-      position:relative;
-      min-height: 100%;
-    }
-
-    a{
-      color:inherit;
-      text-decoration: none;
-    }
-    h1 {
-      display: inline;
-    }
-    h2 {
-      font-size: 50px;
-      animation-duration: 1s;
-      animation-name: subVisual;
-    }
-    h3{
-      font-size: 1.5em;
-      text-align: left;
-      color: #e12d7a;
-    }
-    p{
-      font-weight: bold;
-      font-size: 1.3em;
-      padding: 0 1em;
-      line-height: 1.5em;
-      text-align: left;
-    }
-    ul, li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: inline;
-    }
-    address{
-      font-style: normal;
-    }
-
-    #header{
-      padding: 2em 5%;
-    }
-    @media screen and (max-width:900px){
-      #topmenu{display:none;}
-      #contents p{
-        font-size: 1em;
-      }
-    }
-
-    @media screen and (min-width:900px){
-      #topmenumobile{display:none;}
-      #contents{
-        width: 80%;
-        margin: auto;
-      }
-    }
-
-    #topmenu{
-      float: right;
-    }
-    #topmenu li{
-      font-size: 20px;
-      margin-right: 30px;
-    }
-    #topmenu li :hover{
-      color:#e12d7a;
-      transition: 0.3s;
-    }
-
-    #mainVisual{
-      width: 100%;
-      text-align: center;
-      background-color: #66a3ff;
-      padding: 2em 0;
-      margin-bottom: 2em;
-    }
-
-    #subVisual{
-      width: 100%;
-      height: 12em;
-      line-height: 12em;
-      text-align: center;
-      background-color: #66a3ff;
-      margin-top: -3em;
-      margin-bottom: 3em;
-
-    }
-    @keyframes subVisual{
-      from {
-        transform: translate(0, 2em);
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    #contents{
-      padding: 0 1em;
-      padding-bottom: 100px;
-    }
-
-    #contents h3{
-      padding: 0 1em;
-    }
-    #contents p{
-      padding: 0 2em;
-    }
-
-    #foot{
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      background-color: rgb(40, 40, 40);
-      color: rgb(230,230,230);
-      font-size: 0.8em;
-      display: inline;
-      padding: 1.8em 0;
-    }
-    #foot li{
-      padding-left: 2em;
-    }
-    #foot li::before{
-      content: "|";
-      padding-right: 2em;
-    }
-    #foot li:first-child::before{
-      content: none;
-    }
-
-    img{
-      vertical-align: middle;
-      margin: 5px;
-      max-width: 100%;
-    }
-    #mainVisual img{
-      max-width: 60%;
-      height: auto;
-    }
-
-    .mobile-menu {
-      display: block;
-      position: fixed;
-      top: 25px;
-      right: 25px;
-      z-index: 500;
-      width: 45px;
-      height: 45px;
-      padding: 5px;
-      background-color: #f0f0f0;
-      border: 0;
-    }
-    .mobile-menu i {
-        font-size: 2em;
-    }
-    .menuwrap {
-        position: fixed;
-        top: 0;
-        width: 60%;
-        right: -60%;
-        max-width: 400px;
-        z-index: 400;
-        overflow: auto;
-        height: 100%;
-        padding: 50px 20px;
-        box-sizing: border-box;
-        transition: right .3s ease-in-out;
-        background-color: #f0f0f0;
-    }
-    .menuwrap li{
-      display: block;
-      font-size: 1.7em;
-      font-weight: bold;
-      padding-top: 1em;
-      padding-left: 10%;
-    }
-    .menuwrap li :hover{
-      color:#e12d7a;
-      transition: 0.3s;
-    }
-
-    .menuwrap.on {
-        right: 0;
-    }
-
-    #dimmed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 300;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.5);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="wrapper">
@@ -251,10 +45,21 @@
 
     <div id="contents">
       <div id="information">
-        <p>주소 : 울산광역시 남구 삼산동 1540-12</p>
+        <br>
+        <p>주소 : 울산광역시 남구 삼산동 1541-1</p>
         <p>전화 : 052-272-3475</p>
+        <br><br>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4591.07501147695!2d129.33647295057727!3d35.544309475089015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3567cd3e62066d4f%3A0x9ae763aba02c5bfb!2z7IK87IKw7ZWY7J2067iU7Ja07ZWZ7JuQ!5e0!3m2!1sko!2skr!4v1594189176947!5m2!1sko!2skr" width=100% height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2362.811157771321!2d129.3390308101449!3d35.54399433426683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3567cd3e0afbaa23%3A0xa80b9a50efb8d47f!2z7Jq47IKw6rSR7Jet7IucIOuCqOq1rCDsgrzsgrDrj5kgMTU0MS0x!5e0!3m2!1sko!2skr!4v1598596176935!5m2!1sko!2skr"
+        width=1000   height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <br><br>
+      <h3>차량 운행 지역</h3>
+      <p>효문동 양정동 염포동 명촌동 등 북구 주요 지역</p>
+      <p>남외동 반구동 약사동 복산동 등 중구 주요 지역</p>
+      <p>삼산동 신정동 야음동 달동 등 남구 주요 지역</p>
+      <br><br>
+      <p>10~20분대 차량운행, 가까운 곳에 하이블어학원이 있습니다</p>
+      <br><br><br>
     </div>
 
     <div id="foot">
@@ -271,38 +76,6 @@
       </address>
     </div>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-    document.querySelector(".mobile-menu").addEventListener("click", function(e){
-        if ( document.querySelector('.menuwrap').classList.contains('on') ){
-            //메뉴닫힘
-            document.querySelector('.menuwrap').classList.remove('on');
-            document.querySelector('.mobile-menu i').classList.remove('fa-times')
-            document.querySelector('.mobile-menu i').classList.add('fa-bars');
-
-            //페이지 스크롤 락 해제
-            document.querySelector('#dimmed').remove();
-        } else {
-            //메뉴펼침
-            document.querySelector('.menuwrap').classList.add('on');
-            document.querySelector('.mobile-menu i').classList.remove('fa-bars');
-            document.querySelector('.mobile-menu i').classList.add('fa-times');
-
-            //페이지 스크롤 락 레이어 추가
-            let div = document.createElement('div');
-            div.id = 'dimmed';
-            document.body.append(div);
-
-            //페이지 스크롤 락  모바일 이벤트 차단
-            document.querySelector('#dimmed').addEventListener('scroll touchmove touchend mousewheel', function(e){
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            });
-          }
-      });
-    });
-
-  </script>
+  <script type="text/javascript" src="menu.js"></script>
 </body>
 </html>

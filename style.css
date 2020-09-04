@@ -1,10 +1,20 @@
+@font-face {
+font-family: 'Handon3gyeopsal300g';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+
+
 html, body{
   margin: 0;
   padding: 0;
   height: 100%;
 }
 body {
-  font-family: "Nanum Gothic", serif;
+  /*font-family: "Nanum Gothic", serif;*/
+  font-family: "Handon3gyeopsal300g", serif;
   overflow-x: hidden;
   word-break: keep-all
 }
@@ -27,13 +37,12 @@ h2 {
   animation-name: subVisual;
 }
 h3{
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
   color: #e12d7a;
 }
 p{
-  font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 0 1em;
   line-height: 1.5em;
   text-align: center;

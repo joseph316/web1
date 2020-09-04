@@ -38,13 +38,14 @@ h2 {
 }
 h3{
   font-size: 1.3em;
+  line-height: 2em;
   text-align: center;
   color: #e12d7a;
 }
 p{
   font-size: 1.1em;
+  line-height: 2em;
   padding: 0 1em;
-  line-height: 1.5em;
   text-align: center;
 }
 ul, li {
